@@ -1,5 +1,3 @@
-
-import os
 import json
 import argparse
 import numpy as np
@@ -7,8 +5,6 @@ import numpy as np
 from shapely.geometry import Polygon
 # from descartes.patch import PolygonPatch
 from read_dd import read_data
-from misc.figures import plot_coords
-from misc.colors import colormap_255, semantics_cmap
 
 import warnings
 

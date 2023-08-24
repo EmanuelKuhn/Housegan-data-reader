@@ -1,7 +1,5 @@
-import cv2 
 import numpy as np 
 from PIL import Image
-import matplotlib.pyplot as plt
 import mask_to_poly as mr
 
 def read_door(door_img,img,tmp_diff):
