@@ -293,7 +293,7 @@ def main():
 
     try:
         raster_to_json(line, print_door_warning=False)
-    except AssertionError as e:
+    except (AssertionError, ValueError, IndexError) as e:
         fp_id = line.split("/")[-1].split(".")[0]
 
         with open(f"failed_rplan_json/{fp_id}", "w") as f:
