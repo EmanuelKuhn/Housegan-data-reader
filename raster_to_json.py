@@ -5,7 +5,7 @@ import argparse
 import numpy as np
 # import matplotlib.pyplot as plt
 from shapely.geometry import Polygon
-from descartes.patch import PolygonPatch
+# from descartes.patch import PolygonPatch
 from read_dd import read_data
 from misc.figures import plot_coords
 from misc.colors import colormap_255, semantics_cmap
@@ -265,7 +265,7 @@ def raster_to_json(line, print_door_warning):
         bboxes.append(bbox.tolist())
      
         
-        patch = PolygonPatch(polygon, facecolor=semantics_cmap["bedroom"], alpha=0.7)
+        # patch = PolygonPatch(polygon, facecolor=semantics_cmap["bedroom"], alpha=0.7)
         # ax.add_patch(patch)
    
     info['room_type'] = room_type
