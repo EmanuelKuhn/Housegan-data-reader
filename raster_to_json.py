@@ -3,7 +3,7 @@ import os
 import json
 import argparse
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from shapely.geometry import Polygon
 from descartes.patch import PolygonPatch
 from read_dd import read_data
@@ -15,8 +15,8 @@ def raster_to_json(line):
     """ convert extracted data from rasters to housegan ++ data format :  extract rooms type, bbox, doors, edges and neigbour rooms
                 
     """
-    fig = plt.figure()
-    ax = fig.add_subplot(1, 1, 1)
+    # fig = plt.figure()
+    # ax = fig.add_subplot(1, 1, 1)
     bbox_x1=[]
     bbox_y1=[]
     bbox_x2=[]
@@ -256,13 +256,13 @@ def raster_to_json(line):
             pm.append(([edges[km+p_i][0],edges[km+p_i][1]]))
         km=km+p
         polygon = Polygon(pm)
-        plot_coords(ax, polygon.exterior, alpha=0)
+        # plot_coords(ax, polygon.exterior, alpha=0)
         bbox=np.asarray(polygon.bounds)
         bboxes.append(bbox.tolist())
      
         
         patch = PolygonPatch(polygon, facecolor=semantics_cmap["bedroom"], alpha=0.7)
-        ax.add_patch(patch)
+        # ax.add_patch(patch)
    
     info['room_type'] = room_type
     info['boxes'] = bboxes
