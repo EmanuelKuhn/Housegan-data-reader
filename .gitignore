@@ -5,4 +5,5 @@ rplan_dataset/
 __pycache__/
 
 rplan_json/
-rplan_dataset/*
+rplan_dataset/
+failed_rplan_json/
