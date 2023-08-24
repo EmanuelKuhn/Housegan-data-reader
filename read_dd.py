@@ -342,8 +342,8 @@ def read_data(line):
 	if (len(doors)%4!=0):
 			out=-3	
 	##saving the name out standard (usable) layout		
-	if(out!=1):
-		h.write(line)
+	# if(out!=1):
+	# 	h.write(line)
 	"""f=open("output.txt", "a+")
 	f.write(str(rms_type).strip('[]'))
 	f.write("   ")
@@ -352,6 +352,6 @@ def read_data(line):
 		h1=open("door.txt","a+")
 		out=-4	
 		h1.write(line)"""
-	assert(out==1)
+	assert(out==1), f"error in reading the file {line}, {out=} but expected out==1"
 	return rms_type,poly,doors,walls,out
 	
