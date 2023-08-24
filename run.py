@@ -35,7 +35,7 @@ def main(limit: int | None, max_processes: int):
     # subprocess loop from: https://stackoverflow.com/a/4992640
     processes = set()
 
-    for rplan_id in tqdm(todo_ids):
+    for rplan_id in tqdm(todo_ids, smoothing=50/len(todo_ids)):
         command = f'python raster_to_json.py --path rplan_dataset/floorplan_dataset/{rplan_id}.png || (touch failed_rplan_json/{rplan_id} && false)'
 
         processes.add(subprocess.Popen(command, shell=True))
