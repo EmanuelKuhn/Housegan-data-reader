@@ -4,6 +4,6 @@ rplan_dataset/
 .snakemake/
 __pycache__/
 
-rplan_json/
-rplan_dataset/
-failed_rplan_json/
+rplan_json
+rplan_dataset
+failed_rplan_json
