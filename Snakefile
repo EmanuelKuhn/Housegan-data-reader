@@ -2,7 +2,7 @@ RPLAN_PATH = "rplan_dataset/floorplan_dataset"
 
 rplan_ids, = glob_wildcards("rplan_dataset/floorplan_dataset/{rplan_id}.png")
 
-rplan_ids = rplan_ids
+rplan_ids = rplan_ids[:20000]
 
 rule all:
     input:
