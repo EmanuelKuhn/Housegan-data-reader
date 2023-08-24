@@ -1,0 +1,8 @@
+rplan_dataset/
+
+.ipynb_checkpoints/
+.snakemake/
+__pycache__/
+
+rplan_json/
+rplan_dataset/*
